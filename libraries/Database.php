@@ -13,11 +13,10 @@ class Database {
             $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             // echo "Connected successfully";
             return $bdd;
-            }
-        catch(Exception $e)
-            {
+        }
+        catch(Exception $e) {
             echo "Connection failed: " . $e->getMessage();
             die();
-            }
+        }
     }
 }
