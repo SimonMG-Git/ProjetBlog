@@ -1,0 +1,556 @@
+body {
+    background-color: #414141;
+    min-height: 100vh;
+    position: relative;
+}
+
+#content_wrap {
+    padding-bottom: 170px;
+}
+
+/******** PAGE ACCUEIL *********/
+/******** Header *********/
+
+header {
+    position: fixed;
+    top: 0;
+    z-index: 151;
+    min-width: 100%;
+    background-color: #585858;
+    color: white;
+}
+
+.navbar nav ul {
+	list-style-type: none;
+	display: flex;
+}
+
+.navbar nav li {
+    margin-top: 12px;
+    margin-right: 25px;
+    color: white;
+}
+
+.navbar nav a {
+    color: white;
+}
+
+.navbar nav a:hover {
+	border-top: 2px solid white;
+	padding-top: 21px;
+	transition: .2s ease;
+    text-decoration: none;
+}
+
+/******** Alert *********/
+
+#alert {
+    margin-top: 71px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 150;
+}
+
+.alert {
+    padding-left: 10%;
+    padding-right: 10%;
+    -webkit-animation: slide-top 2s linear 2s both;
+	animation: slide-top 2s linear 2s both;
+}
+
+@-webkit-keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(-100px);
+              transform: translateY(-100px);
+    }
+  }
+  @keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(-100px);
+              transform: translateY(-100px);
+              visibility: hidden;
+    }
+  }
+  
+
+/******** Full page Image *********/
+
+#image {
+    z-index: 149;
+    height: 100vh;
+    margin-bottom: 100px;
+}
+
+#fullPageImg {
+    background-image: url(/img/img_alaska2.jpg);
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position:relative;
+}
+
+#textImg {
+    position:absolute;
+    color: white;
+    text-align: center;
+    top:50%;
+    bottom:0;
+    right:0;
+    left:0;
+}
+
+#textImg h2 {
+    font-size: 3.5em;
+}
+
+#textImg p {
+    font-size: 1.4em;
+}
+
+/******** Derniers Chapitres *********/
+
+#lastChapters {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 100px;
+    
+}
+
+.chapter {
+    margin-bottom:15px;
+    background-color: white;
+    min-width: 350px;
+    max-width: 350px;
+    height: 280px;
+    padding-left: 10px;
+    margin-right: 15px;
+    overflow-wrap: break-word;
+}
+
+.chapter h3 {
+    padding-bottom: 10px;
+    padding-top: 15px;
+}
+
+#chapter2 {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+/******** Footer *********/
+
+#footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background-color: #585858;
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    margin-top: 50px;
+}
+
+
+#bio {
+    margin-left: 50px;
+    width: 500px;
+    color: white;
+}
+
+#bio a {
+    color: inherit;
+}
+
+#socialMedia {
+    margin-top: 80px;
+    margin-right: 50px;
+}
+
+#socialMedia i {
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+
+
+/******** PAGE CHAPITRES *********/
+/******** Liste des Chapitres *********/
+
+#introChapter {
+    margin-top: 100px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+#chapterLine {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#chapter {
+    margin-right: 15px;
+    margin-top: 15px;
+}
+
+/******** Chapitre unique *********/
+
+#oneChapter {
+    background-color: #f0f0f0;
+    margin: 150px auto 50px auto;
+    width: 80%;
+    padding: 30px;
+}
+
+#oneChapter h3 {
+    padding-bottom: 15px;
+}
+
+#commentTitle {
+    width: 80%;
+    margin: auto;
+    color: white;
+}
+
+#comments {
+    background-color: #f0f0f0;
+    margin: 50px auto;
+    width: 80%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#newComments {
+    background-color: #f0f0f0;
+    margin: 50px auto;
+    width: 80%;
+}
+
+/******** Contact *********/
+
+#contact {
+    padding-top: 100px;
+}
+
+#contact p {
+    padding: 0 60px;
+}
+
+#contactBio {
+    height: 300px;
+    background-color: #f0f0f0;
+    text-align: center;
+    margin-left: 30px;
+    margin-right: 30px;
+    overflow: auto;
+}
+
+#contactFormulaire {
+    width: 50%;
+    margin: 40px auto 20px auto;
+    background-color: #f0f0f0;
+}
+
+/******** Inscription *********/
+
+/* #inscription {
+    padding-top: 200px;
+}
+
+#inscriptionFormulaire {
+    padding-left: 50px;
+    padding-top: 20px;
+    margin:auto;
+    height: 500px;
+    width: 400px;
+    background-color: #f0f0f0;
+}
+
+#inscriptionFormulaire form {
+    margin-top: 50px;
+}
+
+#inscriptionFormulaire input {
+    width: 250px;
+}
+
+#inscriptionFormulaire button {
+    margin-top: 40px;
+} */
+
+/******** Connexion *********/
+
+#connexion {
+    padding-top: 200px;
+}
+
+#connexionFormulaire {
+    margin:auto;
+    width: 400px;
+    background-color: #f0f0f0;
+}
+
+/******** Panneau d'administration *********/
+
+#adminNav {
+    margin-top: 71px;
+    padding-top: 60px;
+    padding-right: 15px;
+    height: 90%;
+    background-color: #585858;
+    text-decoration: none;
+    position: absolute;
+}
+
+#adminNav nav ul {
+    list-style-type: none;
+}
+
+#adminNav nav li {
+    margin-top: 15px;
+}
+
+#adminNav nav a {
+    color: white;
+}
+
+#adminNav nav a:hover {
+	border-bottom: 2px solid white;
+	transition: .2s ease;
+    text-decoration: none;
+}
+
+.admin {
+    background-color: #f0f0f0;
+    margin-top: 150px;
+    margin-left:17%;
+    position: absolute;
+    height: 55%;
+    overflow: auto;
+}
+
+.admin h3 {
+    text-align: center;
+}
+
+.tox-tinymce {
+    margin-bottom: 15px;
+}
+
+#text {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#lastItem {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+#lastItem p {
+    margin-top: 25px;
+}
+
+#lastChapter {
+    width: 350px;
+    height: 280px;
+    overflow-wrap: break-word;
+}
+
+#lastComment {
+    width: 350px;
+    height: 280px;
+}
+
+.table {
+    margin: 25px auto;
+    width: 65%;
+    text-align: center;
+}
+
+#adminChapter {
+    padding-top: 20px;
+}
+
+#adminChapter a {
+    color: inherit;
+}
+
+#adminComments {
+    padding-top: 20px;
+}
+
+#isReported {
+    color: red;
+}
+
+#notReported {
+    color:rgb(175, 175, 175);
+}
+
+.interdit {
+    padding-top: 150px;
+}
+
+
+/******************** Responsive *****************/
+
+@media all and (max-width: 700px) {
+    header {
+        min-width: initial;
+        width:100%;
+    }
+    .navbar {
+        padding:5px 0px 0px 0px;
+        flex-direction: column;
+    }
+
+    .navbar nav ul {
+        padding-left: 10px;
+    }
+
+    .navbar nav ul li {
+        margin-right: 10px;
+    }
+
+    #titre h1 {
+        font-size: 25px;
+    }
+
+    #textImg {
+        top:40%;
+    }
+
+    #lastChapters {
+        flex-direction: column;
+        padding-bottom: initial;
+    }
+
+    #chapter1 {
+        width: 92%;
+        margin: 0 auto 10px auto;
+    }
+
+    #chapter {
+        width: 92%;
+        margin: 0 auto 10px auto;
+    }
+
+    #bio {
+        margin-left: 10px;
+    } 
+
+    #bio p {
+        display:none;
+    }
+
+    #socialMedia {
+        display: flex;
+        margin-right: initial;
+        margin-top: 10px;
+    }
+    
+    #socialMedia i {
+        margin-top: 5px;
+    }
+
+    #oneChapter {
+        width: 92%;
+        padding: 15px;
+    }
+
+    #comments {
+        width:92%;
+    }
+
+    #newComments {
+        width: 92%;
+    }
+
+    #connexionFormulaire {
+        width:92%;
+    }
+
+    #contact {
+        padding-top: 130px;
+    }
+
+    #contactBio {
+        margin-left:15px;
+        margin-right: 15px;
+        padding:initial;
+    }
+
+    #contact p {
+        padding: 0 10px;
+    }
+
+    #contactFormulaire {
+        width:92%;
+    }
+
+    #alert {
+        margin-top: 95px;
+    }
+
+    #adminNav {
+        height: initial;
+        margin-top:initial;
+        padding-top: 90px;
+        width:100%;
+    }
+
+    #adminNav nav ul {
+        display:flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    #adminNav nav ul li {
+        width:130px;
+    }
+
+    .admin {
+        width:92%;
+        margin-top:210px;
+        margin-left: 15px;
+    }
+
+    #lastItem {
+        display:flex;
+        flex-direction: column;
+    }
+
+    .table {
+        width:100%;
+    }
+
+    #lastChapter {
+        width: 300px;
+    }
+
+    #lastComment {
+        width: 300px;
+    }
+
+    #adminAddChapter {
+        height: auto;
+        overflow: initial;
+    }
+}
