@@ -6,6 +6,9 @@ class Contact extends Controller {
 
     protected $modelName = "App\Models\Contact";
 
+    /**
+     * Permet l'envoi d'un mail via le formulaire de contact
+     */
     public function send() {
         $this->model->hydrate($_POST);
         if ($this->model->isValid()){

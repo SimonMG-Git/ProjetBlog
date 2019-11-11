@@ -6,6 +6,10 @@ class Admin extends Controller {
 
     protected $modelName = "App\Models\Admin";
 
+    /**
+     * Function permettant de compter le nombre de chapitre, commentaires et utilisateurs
+     * Et affichage du dernier chapitre et dernier commentaire sur la page d'accueil du panel admin
+     */
     public function home() {
         $chapterNbr = $this->model->count('chapitres');
         $commentsNbr = $this->model->count('comments');
