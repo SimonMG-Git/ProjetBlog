@@ -3,8 +3,6 @@ require '../vendor/autoload.php';
 require_once('../libraries/Database.php');
 require_once('../libraries/Renderer.php');
 
-$method = $_SERVER['REQUEST_METHOD'];
-
 $router = new AltoRouter();
 
 $router->map('GET','/', function() {
@@ -120,10 +118,6 @@ $router->map('POST', '/comments/approve', function() {
 });
 
 $match = $router->match();
-
-// $method = $_SERVER['REQUEST_METHOD'];
-// var_dump($router);
-// die();
 
 if (is_array($match)) {
     if (is_callable($match['target'])){
