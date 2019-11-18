@@ -49,8 +49,8 @@ if(isset($_SESSION['connected']) && ($_SESSION['connected'] == TRUE)) { ?>
 
 <?php } else { ?>
     <section id="admin">
-    <div class="admin col-lg-9" id="adminComments">
-        <h3 class="interdit">Vous n'êtes pas autorisé à voir cette page.</h3>
-    </div>
-</section>
+        <div class="admin col-lg-9" id="adminComments">
+            <h3 class="interdit">Vous n'êtes pas autorisé à voir cette page.</h3>
+        </div>
+    </section>
 <?php } ?>
