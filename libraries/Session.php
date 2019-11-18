@@ -2,6 +2,9 @@
 //sessionmessage
 class Session {
 
+    /**
+     * Affichage des messages d'erreurs/succès
+     */
     public static function message($message, $request, $errors) {
         if (session_status() == PHP_SESSION_NONE) {
             session_start();
@@ -14,6 +17,9 @@ class Session {
         ];
     }
 
+    /**
+     * Affiche une donnée enregistrée dans la session
+     */
     public static function value($item) {
         if (session_status() == PHP_SESSION_NONE) {
             session_start();
@@ -23,6 +29,9 @@ class Session {
         };
     }
 
+    /**
+     * Supprime toutes les données enregistrées
+     */
     public static function unset() {
         if (session_status() == PHP_SESSION_NONE) {
             session_start();
