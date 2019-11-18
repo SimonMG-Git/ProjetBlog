@@ -31,10 +31,16 @@ class Chapitre extends Controller {
         header('Location:/admin/chapters');
     }
 
+    /**
+     * Renvoie à la page de création d'un chapitre
+     */
     public function create() {
         \Renderer::render('admin_add_chapter');
     }
 
+    /**
+     * Ajoute un Chapitre
+     */
     public function store() {
         $this->model->hydrate($_POST);
         if ($this->model->isValid()){
@@ -63,9 +69,9 @@ class Chapitre extends Controller {
     }
 
     /**
-     * Récupère un chapitre selon $id
+     * Récupère un chapitre selon son $id pour le modifier sur la page d'édition du panel admin
      */
-    public function edit() { //modifier en edit
+    public function edit() {
         $chapitre = $this->model->findById($_GET['id']);
         \Renderer::render('admin_edit', compact('chapitre'));
     }

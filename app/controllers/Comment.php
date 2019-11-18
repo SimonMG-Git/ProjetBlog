@@ -18,6 +18,9 @@ class Comment extends Controller {
         header('Location:/chapter/' . $_POST['id_chapter']);
     }
 
+    /**
+     * Permet de report un commentaire selon son ID
+     */
     public function report($id) {
         if ($this->model->isValid()){
             $this->model->report($_POST['comment_id']);
@@ -25,6 +28,9 @@ class Comment extends Controller {
         header('Location:/chapter/' . $_POST['id_chapter']);        
     }
 
+    /**
+     * Permet d'unreport un commentaire selon son ID
+     */
     public function unreport($id) {
         $this->model->unreport($_POST['comment_id']);
         header('Location:/admin/comments');        

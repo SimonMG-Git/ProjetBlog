@@ -22,6 +22,9 @@ class Contact extends Model {
         $this->message = htmlspecialchars($message);
     }
 
+    /**
+     * Envoi un mail depuis la page contact
+     */
     public function send() {
         $this->sujet = $_POST['sujet'];
         $this->message = $_POST['message'];

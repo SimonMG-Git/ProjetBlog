@@ -25,6 +25,9 @@ class Auth extends Controller {
         }
     }
 
+    /**
+     * Fonction de deconnexion de l'utilisateur
+     */
     public function disconnect() {
         session_start();
         $model = new $this->modelName();

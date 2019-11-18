@@ -46,6 +46,9 @@ class Comment extends Model {
         return $comments;
     }
 
+    /**
+     * Ajouter un commentaire
+     */
     public function save() {
         if ($this->id == 0) {
             $reponse = $this->bdd->prepare('INSERT INTO comments SET body = :body, author = :author, id_chapter = :id_chapter');
@@ -57,6 +60,9 @@ class Comment extends Model {
         }
     }
 
+    /**
+     * Récupère tous les commentaires
+     */
     public function getAll() : array {
         $reponse = $this->bdd->query('SELECT id, id_chapter, author, report, SUBSTR(body,1,50) as body FROM comments');
         $comments = $reponse->fetchAll();
@@ -64,6 +70,9 @@ class Comment extends Model {
         return $comments;
     }
 
+    /**
+     * supprimer une commentaire selon son ID
+     */
     public function delete($id) {
         $query = $this->bdd->prepare('SELECT * FROM comments WHERE id = :id');
         $query->execute(['id' => $id]);
@@ -75,11 +84,17 @@ class Comment extends Model {
         }       
     }
 
+    /**
+     * Permets de supprimer les commentaires correspondant à un article
+     */
     public function deleteAllOfArticle($articleId) {
         $reponse = $this->bdd->prepare('DELETE FROM comments WHERE id_chapter = :id');
         $reponse->execute(['id' => $articleId]);
     }
 
+    /**
+     * Permet de report un commentaire selon son ID
+     */
     public function report($id) {
         $query = $this->bdd->prepare('SELECT * FROM comments WHERE id = :id');
         $query->execute(['id' => $id]);
@@ -94,6 +109,9 @@ class Comment extends Model {
         return $this;
     }
 
+    /**
+     * Permet d'unreport un commentaire selon son ID
+     */
     public function unreport($id) {
         $query = $this->bdd->prepare('SELECT * FROM comments WHERE id = :id');
         $query->execute(['id' => $id]);
