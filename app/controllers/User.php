@@ -2,6 +2,10 @@
 
 namespace App\Controllers;
 
+/**
+ * Controller User pour une éventuelle implémentation d'un système de compte utilisateur
+ */
+
 class User extends Controller {
 
     protected $modelName = "\Models\User";

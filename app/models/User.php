@@ -2,6 +2,10 @@
 
 namespace App\Models;
 
+/**
+ * Models User pour une éventuelle implémentation d'un système de compte utilisateur
+ */
+
 class User extends Model {
 
     protected $username;
